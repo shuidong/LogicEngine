@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26CE24DE-F8F4-4E5B-BEE4-3C5497063E18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicEngine.Unity</RootNamespace>
+    <AssemblyName>LogicEngine.Unity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\Plugins\Unity5.2\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\Plugins\Unity5.2\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant.cs" />
+    <Compile Include="DefaultControls_i18n.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="ForEdit.cs" />
+    <Compile Include="Gizoms\GizmoTile.cs" />
+    <Compile Include="Gizoms\GizmoTilemap.cs" />
+    <Compile Include="Gizoms\UtilGizmos.cs" />
+    <Compile Include="Toolkit\MonoDebug.cs" />
+    <Compile Include="Toolkit\MonoGraphicLog.cs" />
+    <Compile Include="PopupStrings.cs" />
+    <Compile Include="Recyclable.cs" />
+    <Compile Include="Recycler.cs" />
+    <Compile Include="Services\LanguageService.cs" />
+    <Compile Include="Logic.cs" />
+    <Compile Include="LoginService.cs" />
+    <Compile Include="MonoSingleton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\VersionService.cs" />
+    <Compile Include="Toolkit\FOV45.cs" />
+    <Compile Include="Toolkit\Sketch.cs" />
+    <Compile Include="SpriteAnimation.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Text_i18n.cs" />
+    <Compile Include="Toolkit\TextCal.cs" />
+    <Compile Include="Toolkit\TextFont.cs" />
+    <Compile Include="Toolkit\UiSketch.cs" />
+    <Compile Include="Translation.cs" />
+    <Compile Include="Tween\Tween.cs" />
+    <Compile Include="Tween\TweenPosition.cs" />
+    <Compile Include="Tween\UiTween.cs" />
+    <Compile Include="Tween\UiTweenAlpha.cs" />
+    <Compile Include="Tween\UiTweenColor.cs" />
+    <Compile Include="Tween\UiTweenPosition.cs" />
+    <Compile Include="Tween\UiTweenRotation.cs" />
+    <Compile Include="Tween\UiTweenScale.cs" />
+    <Compile Include="Tween\UiTweenTrigger.cs" />
+    <Compile Include="Ui.cs" />
+    <Compile Include="UnityEngineExtension.cs" />
+    <Compile Include="Utils\UtilDevelop.cs" />
+    <Compile Include="Utils\UtilGameObject.cs" />
+    <Compile Include="Entrance.cs" />
+    <Compile Include="Utils\UtilPrefabEdit.cs" />
+    <Compile Include="Utils\UtilResource.cs" />
+    <Compile Include="Utils\UtilScreen.cs" />
+    <Compile Include="Utils\UtilSetting.cs" />
+    <Compile Include="Utils\UtilString.cs" />
+    <Compile Include="Utils\UtilUi.cs" />
+    <Compile Include="Visible.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicEngine\LogicEngine.csproj">
+      <Project>{199e7a33-4b77-49b2-9a94-b6c1b2fe0d6d}</Project>
+      <Name>LogicEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

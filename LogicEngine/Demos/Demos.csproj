@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EAFADB8-A4C7-46C9-BDD7-F9FFDD8BC9BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demos</RootNamespace>
+    <AssemblyName>Demos</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LogicEngine">
+      <HintPath>..\..\Plugins\Target\LogicEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicEngine.Unity">
+      <HintPath>..\..\Plugins\Target\LogicEngine.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\Plugins\Target\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\Plugins\Target\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoomBeach\AiCooly.cs" />
+    <Compile Include="BoomBeach\AiSCooly.cs" />
+    <Compile Include="BoomBeach\Client\Entrance\EntranceSingle.cs" />
+    <Compile Include="BoomBeach\Building.cs" />
+    <Compile Include="BoomBeach\CfgBoomBeachTranslator.cs" />
+    <Compile Include="BoomBeach\CfgMgr.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CBuilding.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CCooly.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CHeroEquipSlot.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CHeroPanel.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CIslet.cs" />
+    <Compile Include="BoomBeach\Client\Parts\CVaria.cs" />
+    <Compile Include="BoomBeach\Client\Parts\VBuilding.cs" />
+    <Compile Include="BoomBeach\Client\Parts\VCooly.cs" />
+    <Compile Include="BoomBeach\Client\Parts\VIslet.cs" />
+    <Compile Include="BoomBeach\Client\Parts\VVaria.cs" />
+    <Compile Include="BoomBeach\Client\Entrance\EntranceEditIslet.cs" />
+    <Compile Include="BoomBeach\Client\Entrance\EntranceVisualNet.cs" />
+    <Compile Include="BoomBeach\Client\Scenes\SceneEditIslet.cs" />
+    <Compile Include="BoomBeach\Client\Scenes\SceneMainbase.cs" />
+    <Compile Include="BoomBeach\Client\UiMgr.cs" />
+    <Compile Include="BoomBeach\Client\UI\UiHeroPanel.cs" />
+    <Compile Include="BoomBeach\Client\UI\UiSlotEquip.cs" />
+    <Compile Include="BoomBeach\Core.cs" />
+    <Compile Include="BoomBeach\Equip.cs" />
+    <Compile Include="BoomBeach\EquipSlot.cs" />
+    <Compile Include="BoomBeach\Fightbase.cs" />
+    <Compile Include="BoomBeach\Guild.cs" />
+    <Compile Include="BoomBeach\Hero.cs" />
+    <Compile Include="BoomBeach\Islet.cs" />
+    <Compile Include="BoomBeach\Item.cs" />
+    <Compile Include="BoomBeach\Mainbase.cs" />
+    <Compile Include="BoomBeach\Cooly.cs" />
+    <Compile Include="BoomBeach\Message.cs" />
+    <Compile Include="BoomBeach\Play.cs" />
+    <Compile Include="BoomBeach\Server\ChatCenter.cs" />
+    <Compile Include="BoomBeach\Server\Requests\CreateGuild.cs" />
+    <Compile Include="BoomBeach\Server\GameCenter.cs" />
+    <Compile Include="BoomBeach\Server\GuildCenter.cs" />
+    <Compile Include="BoomBeach\Server\ManagerCenter.cs" />
+    <Compile Include="BoomBeach\Varia.cs" />
+    <Compile Include="NatureOfCode\Entrance6.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NatureOfCode\UiMgr.cs" />
+    <Compile Include="Soft3D\Camera.cs" />
+    <Compile Include="Soft3D\Color.cs" />
+    <Compile Include="Soft3D\Color32.cs" />
+    <Compile Include="Soft3D\EntranceSoft3D.cs" />
+    <Compile Include="Soft3D\Mesh.cs" />
+    <Compile Include="Soft3D\Plane.cs" />
+    <Compile Include="Soft3D\Quaternion.cs" />
+    <Compile Include="Soft3D\Ray.cs" />
+    <Compile Include="Soft3D\UtilDrawing.cs" />
+    <Compile Include="Soft3D\Vector4f.cs" />
+    <Compile Include="Stories\EntranceStories.cs" />
+    <Compile Include="Stories\StoryType.cs" />
+    <Compile Include="TetrisGame\Cube.cs" />
+    <Compile Include="TetrisGame\EntranceTetris.cs" />
+    <Compile Include="TetrisGame\Play.cs" />
+    <Compile Include="TetrisGame\Shape.cs" />
+    <Compile Include="TetrisGame\Tetris.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BoomBeach\Requests\Guild\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

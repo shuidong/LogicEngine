@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{199E7A33-4B77-49B2-9A94-B6C1B2FE0D6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicEngine</RootNamespace>
+    <AssemblyName>LogicEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Plugins\Target\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Plugins\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\AiSTree.cs" />
+    <Compile Include="AI\AiTree.cs" />
+    <Compile Include="Physics2D\AStar.cs" />
+    <Compile Include="Entity\Atomic.cs" />
+    <Compile Include="Entity\Center.cs" />
+    <Compile Include="Entity\Daemon.cs" />
+    <Compile Include="Entity\Request.cs" />
+    <Compile Include="Physics2D\Cellular1.cs" />
+    <Compile Include="Entity\Scene.cs" />
+    <Compile Include="Utils\ExtendRandom.cs" />
+    <Compile Include="PerlinNoise.cs" />
+    <Compile Include="Physics2D\Boid.cs" />
+    <Compile Include="Physics2D\FlowField.cs" />
+    <Compile Include="Physics2D\Particle.cs" />
+    <Compile Include="Physics2D\RTile.cs" />
+    <Compile Include="Physics2D\Path.cs" />
+    <Compile Include="Entity\Plist.cs" />
+    <Compile Include="Reflection\Bean.cs" />
+    <Compile Include="Entity\Cmd.cs" />
+    <Compile Include="Entity\CmdRoute.cs" />
+    <Compile Include="Entity\Dyc.cs" />
+    <Compile Include="Entity\EntityMgr.cs" />
+    <Compile Include="Entity\Module.cs" />
+    <Compile Include="Entity\Play.cs" />
+    <Compile Include="Reflection\CachedType.cs" />
+    <Compile Include="Entity\Cfg.cs" />
+    <Compile Include="Reflection\Converter.cs" />
+    <Compile Include="Fsm.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\Part.cs" />
+    <Compile Include="inConstants.cs" />
+    <Compile Include="Entity\StorySystem.cs" />
+    <Compile Include="Entity\QuestSystem.cs" />
+    <Compile Include="Physics2D\Rect.cs" />
+    <Compile Include="Physics2D\TileMap.cs" />
+    <Compile Include="Utils\UtilCfg.cs" />
+    <Compile Include="Utils\UtilReflection.cs" />
+    <Compile Include="Net\Peer.cs" />
+    <Compile Include="Net\Device.cs" />
+    <Compile Include="Logic.cs" />
+    <Compile Include="Third\Mono.Xml\MiniParser.cs" />
+    <Compile Include="Third\Mono.Xml\SecurityParser.cs" />
+    <Compile Include="Third\Mono.Xml\SmallXmlParser.cs" />
+    <Compile Include="Physics2D\PathFinder.cs" />
+    <Compile Include="Entity\Prop.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequirePartAttribute.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SnowflakeID.cs" />
+    <Compile Include="SyncList.cs" />
+    <Compile Include="Physics2D\Tile.cs" />
+    <Compile Include="Utils\ExtendArray.cs" />
+    <Compile Include="Utils\ExtendDictionary.cs" />
+    <Compile Include="Utils\ExtendFloat.cs" />
+    <Compile Include="Utils\ExtendInt.cs" />
+    <Compile Include="Utils\ExtendList.cs" />
+    <Compile Include="Utils\UtilAssert.cs" />
+    <Compile Include="Utils\UtilDebug.cs" />
+    <Compile Include="Utils\UtilEnumerator.cs" />
+    <Compile Include="Utils\UtilFile.cs" />
+    <Compile Include="Utils\UtilGeometry.cs" />
+    <Compile Include="Utils\UtilJson.cs" />
+    <Compile Include="Utils\UtilLambda.cs" />
+    <Compile Include="Utils\UtilLog.cs" />
+    <Compile Include="Utils\UtilMask.cs" />
+    <Compile Include="Utils\UtilMath.cs" />
+    <Compile Include="Utils\UtilMessage.cs" />
+    <Compile Include="Utils\UtilPath.cs" />
+    <Compile Include="Utils\UtilRandom.cs" />
+    <Compile Include="Utils\UtilStats.cs" />
+    <Compile Include="Utils\UtilString.cs" />
+    <Compile Include="Utils\UtilTween.cs" />
+    <Compile Include="Vector2f.cs" />
+    <Compile Include="Vector2i.cs" />
+    <Compile Include="Vector3f.cs" />
+    <Compile Include="Vector3i.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Third\Mono.Xml\ChangeLog" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
